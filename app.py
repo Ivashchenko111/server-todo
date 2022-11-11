@@ -9,27 +9,27 @@ todo = (
     {
     'id': 1,
     'title': 'Buy milk',
-    'iscomplited': 0,
+    'isComplited': False,
     'deadline': '01.11.22', 
     },
     {
     'id': 2,
     'title': 'Buy water',
-    'iscomplited': 0,
+    'isComplited': False,
     'deadline': '05.11.22',
     },
     {
     'id': 3,
     'title': 'Buy dog',
-    'iscomplited': 0,
+    'isComplited': False,
     'deadline': '10.11.22',
     })
 
 @app.route('/')
 def home_page():
-    return '<h1>Write in URL " /todo", Hrundel!=) </h1>'
+    return '<h1> Write in URL " /todos", Hrundel!=) </h1>'
 
-@app.route('/todo', methods=['GET'])
+@app.route('/todos', methods=['GET'])
 def get_todo():
     return jsonify(todo)
 
